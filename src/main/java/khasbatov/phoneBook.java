@@ -18,15 +18,28 @@ public class phoneBook {
 
     public static void main(String[] args) {
 
+        init();
+        String name = null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         try {
 
-            String name = reader.readLine();
+            name = reader.readLine();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        if(book.containsKey(name)){
+
+            int i=1;
+            for (String str : book.get(name)){
+                System.out.println(i+ ". " + str);
+                i++;
+            }
+
+        } else
+            System.out.println("такого ФИО в БД нет");
     }
 
     public static void init(){
@@ -42,5 +55,4 @@ public class phoneBook {
         book.put("Петров", petrov);
         book.put("Сидоров", sidorov);
     }
-
 }
