@@ -10,8 +10,11 @@ import java.util.Map;
 
 public class phoneBook {
 
-    Map<String,String> book = new HashMap<>();
-    List<String> numbers = new ArrayList<>();
+    static Map<String, List<String>> book = new HashMap<>();
+
+    static List<String> ivanov = new ArrayList<>();
+    static List<String> petrov = new ArrayList<>();
+    static List<String> sidorov = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -24,6 +27,20 @@ public class phoneBook {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void init(){
+
+        ivanov.add("+8 800 2000 500");
+        ivanov.add("+8 800 200 600");
+        petrov.add("+8 800 2000 700");
+        sidorov.add("+8 800 2000 800");
+        sidorov.add("+8 800 2000 900");
+        sidorov.add("+8 800 2000 000");
+
+        book.put("Иванов", ivanov);
+        book.put("Петров", petrov);
+        book.put("Сидоров", sidorov);
     }
 
 }
