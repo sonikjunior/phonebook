@@ -51,8 +51,8 @@ public class phoneBook {
         sidorov.add("+8 800 2000 900");
         sidorov.add("+8 800 2000 000");
 
-        book.put("Иванов", ivanov);
-        book.put("Петров", petrov);
-        book.put("Сидоров", sidorov);
+        book.put("Иванов И.И.", ivanov);
+        book.put("Петров П.П.", petrov);
+        book.put("Сидоров С.С.", sidorov);
     }
 }
