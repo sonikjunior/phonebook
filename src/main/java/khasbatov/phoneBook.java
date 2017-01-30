@@ -18,6 +18,8 @@ public class phoneBook {
 
     public static void main(String[] args) {
 
+
+        System.out.println("Введите ФИО (например Иванов И.И.):");
         init();
         String name = null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
